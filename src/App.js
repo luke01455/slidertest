@@ -4,9 +4,18 @@ import './App.scss';
 
 function App() {
   let [sliderValue, setSliderValue] = useState(0)
+  const [randomValues, setRandomValues] = useState([])
+  let [coinFlip, setCoinFlip] = useState(0)
+
   const onFormChange = (value) => {
-    setSliderValue(value);
+    setCoinFlip(Math.floor((Math.random() * 2) + 1))
+      setSliderValue(value);
+      setRandomValues([])
+      for(let i = 0; i < 10; i++) {
+        setRandomValues(randomValues => [...randomValues,(Math.floor((Math.random() * 5) + 1))])
+      }
   }
+  
   return (
     <div className="App">
       <div className="Rangebar-Container">
@@ -15,24 +24,24 @@ function App() {
       </div>
 
       <div className='grid-section-wrapper'>
-        <GridSection sliderNumber={parseInt(sliderValue)}/>
-        <GridSection sliderNumber={parseInt(sliderValue)}/>
+        <GridSection sliderNumber={parseInt(coinFlip === 1 ? sliderValue : randomValues[1])}/>
+        <GridSection sliderNumber={parseInt(coinFlip === 1 ? sliderValue : randomValues[2])}/>
       </div>
       <div className='grid-section-wrapper'>
-        <GridSection sliderNumber={parseInt(sliderValue)}/>
-        <GridSection sliderNumber={parseInt(sliderValue)}/>
+        <GridSection sliderNumber={parseInt(coinFlip === 1 ? sliderValue : randomValues[3])}/>
+        <GridSection sliderNumber={parseInt(coinFlip === 1 ? sliderValue : randomValues[4])}/>
       </div>
       <div className='grid-section-wrapper'>
-        <GridSection sliderNumber={parseInt(sliderValue)}/>
-        <GridSection sliderNumber={parseInt(sliderValue)}/>
+        <GridSection sliderNumber={parseInt(coinFlip === 1 ? sliderValue : randomValues[5])}/>
+        <GridSection sliderNumber={parseInt(coinFlip === 1 ? sliderValue : randomValues[6])}/>
       </div>
       <div className='grid-section-wrapper'>
-        <GridSection sliderNumber={parseInt(sliderValue)}/>
-        <GridSection sliderNumber={parseInt(sliderValue)}/>
+        <GridSection sliderNumber={parseInt(coinFlip === 1 ? sliderValue : randomValues[7])}/>
+        <GridSection sliderNumber={parseInt(coinFlip === 1 ? sliderValue : randomValues[8])}/>
       </div>
       <div className='grid-section-wrapper'>
-        <GridSection sliderNumber={parseInt(sliderValue)}/>
-        <GridSection sliderNumber={parseInt(sliderValue)}/>
+        <GridSection sliderNumber={parseInt(coinFlip === 1 ? sliderValue : randomValues[9])}/>
+        <GridSection sliderNumber={parseInt(coinFlip === 1 ? sliderValue : randomValues[0])}/>
       </div>
 
     </div>
