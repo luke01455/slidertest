@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './grid-section.styles.scss';
 
 const GridSection = ({sliderNumber}) => {
