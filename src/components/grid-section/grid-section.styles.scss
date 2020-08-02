@@ -1,0 +1,28 @@
+.grid-section-container {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .grid-item{
+        width: 75px;
+        height: 75px;
+
+        .blue {
+            background-color: blue;
+        }
+        .green {
+            background-color: green;
+        }
+        .red {
+            background-color: red;
+        }
+        .orange {
+            background-color: orange;
+        }
+        .purple {
+            background-color: purple;
+        }
+    }
+}
