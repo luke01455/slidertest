@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+
+  .grid-section-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
