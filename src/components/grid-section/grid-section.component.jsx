@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './grid-section.styles.scss';
 
 const GridSection = ({sliderNumber}) => {
-
-    console.log(sliderNumber)
     return (
         <div className='grid-section-container'>
             <div className={`grid-item ${sliderNumber === 1 ? 'blue' : ''}`}></div>
